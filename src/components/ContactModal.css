@@ -127,6 +127,30 @@
   box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
 }
 
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-status {
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.form-status.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.form-status.error {
+  background: #ffebee;
+  color: #c62828;
+}
+
 .social-links {
   text-align: center;
   padding-top: 20px;
