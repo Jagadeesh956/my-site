@@ -1,0 +1,185 @@
+.about {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.about-wrapper {
+  max-width: 1300px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+}
+
+.profile-block {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.profile-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 6px solid #667eea;
+  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+  overflow: hidden;
+}
+
+.profile-img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: none;
+  box-shadow: none;
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+.content-block {
+  background: white;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+}
+
+.content-block h1 {
+  font-size: 36px;
+  color: #667eea;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.content-block h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #764ba2;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.skills {
+  margin-top: 30px;
+}
+
+.skills h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.skills ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.skills li {
+  padding: 12px 15px;
+  background: linear-gradient(135deg, #f5f7ff 0%, #f0f0f0 100%);
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  color: #333;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.skills li:hover {
+  transform: translateX(5px);
+}
+
+@media (max-width: 1024px) {
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .profile-block {
+    padding-right: 0;
+    justify-content: center;
+  }
+
+  .profile-img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .content-block {
+    padding: 40px;
+  }
+
+  .content-block h1 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .profile-block {
+    padding-right: 0;
+    justify-content: center;
+  }
+
+  .profile-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .content-block {
+    padding: 30px;
+  }
+
+  .content-block h1 {
+    font-size: 28px;
+  }
+
+  .content-block h2 {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .skills ul {
+    grid-template-columns: 1fr;
+  }
+}
