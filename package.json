@@ -4,15 +4,21 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "gray-matter": "^4.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1"
+    "react-markdown": "^8.0.7",
+    "react-scripts": "5.0.1",
+    "remark-gfm": "^3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sync-blogs": "node scripts/sync-vault.js",
+    "dev": "npm run sync-blogs && react-scripts start",
+    "prebuild": "npm run sync-blogs"
   },
   "eslintConfig": {
     "extends": [

@@ -20,8 +20,10 @@ const menuSections = [
     label: 'Blogs',
     icon: '📝',
     subItems: [
-      { label: 'Getting Started', href: '#blogs' },
-      { label: 'Advanced Topics', href: '#blogs' },
+      { label: 'All Posts', href: '#blogs' },
+      { label: 'Kubernetes', href: '#blogs' },
+      { label: 'SRE', href: '#blogs' },
+      { label: 'Distributed Systems', href: '#blogs' },
     ],
   },
 ];
@@ -88,6 +90,9 @@ function Header({ onContactClick }) {
       </div>
 
       <div className="header-right">
+        <button type="button" className="header-contact-btn" onClick={onContactClick}>
+          Contact
+        </button>
         <a
           href={LINKEDIN_URL}
           target="_blank"
