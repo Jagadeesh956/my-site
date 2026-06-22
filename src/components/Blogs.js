@@ -112,9 +112,6 @@ function Blogs() {
       <section id="blogs" className="blogs-section">
         <div className="blogs-container">
           <h2 className="blogs-heading">Blog Posts</h2>
-          <p className="blogs-subheading">
-            Written in Obsidian · rendered here
-          </p>
 
           {blogs.length === 0 ? (
             <div className="blogs-empty-state">

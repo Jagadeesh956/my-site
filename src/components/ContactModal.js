@@ -133,8 +133,9 @@ function ContactModal({ isOpen, onClose }) {
         <div className="social-links">
           <h3>Connect With Me</h3>
           <div className="links">
-            <a href="https://github.com/jagadeesh956" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/poralla-jagadeesh/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="mailto:jagadeeshporalla2@gmail.com" className="email-pill">Email</a>
+            <a href="https://github.com/jagadeesh956" target="_blank" rel="noopener noreferrer" className="github-pill">GitHub</a>
+            <a href="https://www.linkedin.com/in/poralla-jagadeesh/" target="_blank" rel="noopener noreferrer" className="linkedin-pill">LinkedIn</a>
           </div>
         </div>
       </div>

@@ -2,7 +2,12 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background:
+    radial-gradient(circle at 15% 20%, rgba(56, 189, 248, 0.42), transparent 42%),
+    radial-gradient(circle at 85% 10%, rgba(244, 114, 182, 0.36), transparent 36%),
+    radial-gradient(circle at 80% 80%, rgba(253, 186, 116, 0.32), transparent 38%),
+    linear-gradient(145deg, #2b3fab 0%, #6d28d9 45%, #be185d 100%);
+  background-attachment: fixed;
 }
 
 main {
@@ -15,6 +20,10 @@ main {
 
 @media (max-width: 768px) {
   .App {
-    padding: 20px;
+    background:
+      radial-gradient(circle at 20% 12%, rgba(56, 189, 248, 0.36), transparent 38%),
+      radial-gradient(circle at 80% 18%, rgba(244, 114, 182, 0.28), transparent 34%),
+      linear-gradient(160deg, #3045b8 0%, #6d28d9 52%, #be185d 100%);
+    background-attachment: scroll;
   }
 }

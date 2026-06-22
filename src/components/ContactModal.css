@@ -174,11 +174,51 @@
   color: #667eea;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .links a:hover {
   color: #764ba2;
+  transform: translateY(-1px);
+}
+
+.links .email-pill {
+  background: linear-gradient(135deg, #4f46e5, #ec4899);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.35);
+}
+
+.links .email-pill:hover {
+  color: white;
+  box-shadow: 0 10px 24px rgba(236, 72, 153, 0.38);
+}
+
+.links .github-pill {
+  background: linear-gradient(135deg, #111827, #374151);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(17, 24, 39, 0.35);
+}
+
+.links .github-pill:hover {
+  color: white;
+  box-shadow: 0 10px 24px rgba(17, 24, 39, 0.45);
+}
+
+.links .linkedin-pill {
+  background: linear-gradient(135deg, #0a66c2, #2563eb);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.33);
+}
+
+.links .linkedin-pill:hover {
+  color: white;
+  box-shadow: 0 10px 24px rgba(10, 102, 194, 0.4);
 }
 
 @media (max-width: 768px) {
