@@ -20,7 +20,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       # prebuild hook runs sync-blogs automatically before building
       - name: Build (sync blogs + compile)
