@@ -20,7 +20,9 @@ function About() {
             <span className="bold">S</span>ite <span className="bold">R</span>eliability <span className="bold">E</span>ngineer | Java Developer
           </p>
           <p className="description">
-            I am passionate about designing, developing, managing and maintaining resilient and scalable distributed systems using modern technologies. Being graduated from Cleveland State University with a degree in Computer Science, I have a strong foundation in software development and system design. I thrive on solving complex problems and optimizing system performance to ensure seamless user experiences.
+            An experienced software engineer passionate about designing, developing, managing and maintaining resilient and 
+            scalable distributed systems using modern technologies. 
+            I thrive on solving complex problems and optimizing system performance to ensure seamless user experiences. Curious about new technologies and always looking for new challenges.
           </p>
           <div className="skills">
             <h3>Skills</h3>
