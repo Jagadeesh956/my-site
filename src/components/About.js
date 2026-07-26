@@ -29,8 +29,10 @@ function About() {
               <li>Spark</li>
               <li>Kubernetes</li>
                 <li>Cassandra</li>
-              <li>Full Stack Development</li>
+                <li>PostgreSQL</li>
+              <li>Microservices</li>
                 <li>Distributed Systems</li>
+                <li>Linux</li>
             </ul>
           </div>
         </div>
