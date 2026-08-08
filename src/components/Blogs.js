@@ -14,8 +14,19 @@ function initMermaid() {
   mermaid.initialize({
     startOnLoad: false,
     securityLevel: 'loose',
-    theme: 'default',
+    theme: 'base',
+    themeVariables: {
+      primaryColor: '#dbeafe',
+      primaryTextColor: '#0f172a',
+      primaryBorderColor: '#3b82f6',
+      secondaryColor: '#ede9fe',
+      tertiaryColor: '#ecfeff',
+      lineColor: '#64748b',
+      fontFamily: 'Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif',
+      background: '#ffffff',
+    },
     flowchart: { useMaxWidth: true, htmlLabels: true },
+    sequence: { useMaxWidth: true },
   });
   mermaidReady = true;
 }

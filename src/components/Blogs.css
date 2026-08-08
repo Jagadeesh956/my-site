@@ -428,18 +428,36 @@
 }
 
 .mermaid-block {
-  background: #fff;
-  border: 1px solid #e6e8f0;
-  border-radius: 12px;
-  padding: 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid #d7e4ff;
+  border-radius: 14px;
+  padding: 16px;
   margin: 1.3em 0;
   overflow-x: auto;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.08);
 }
 
 .mermaid-block svg {
   width: 100%;
   height: auto;
+}
+
+.mermaid-block svg .node rect,
+.mermaid-block svg .node polygon,
+.mermaid-block svg .node circle {
+  stroke-width: 1.6px;
+  filter: drop-shadow(0 2px 3px rgba(15, 23, 42, 0.12));
+}
+
+.mermaid-block svg .cluster rect {
+  fill: #f8fafc !important;
+  stroke: #cbd5e1 !important;
+}
+
+.mermaid-block svg .edgePath .path,
+.mermaid-block svg path.messageLine0,
+.mermaid-block svg path.messageLine1 {
+  stroke-width: 1.8px !important;
 }
 
 /* ── Responsive ──────────────────────────────────────────────────────────────── */
