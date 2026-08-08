@@ -1,11 +1,53 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import mermaid from 'mermaid';
 import blogs from '../data/blogs';
 import './Blogs.css';
 
 // ── Tag filter list ────────────────────────────────────────────────────────────
 const ALL_TAGS = ['All', ...Array.from(new Set(blogs.flatMap((b) => b.tags)))];
+
+let mermaidReady = false;
+function initMermaid() {
+  if (mermaidReady) return;
+  mermaid.initialize({
+    startOnLoad: false,
+    securityLevel: 'loose',
+    theme: 'default',
+    flowchart: { useMaxWidth: true, htmlLabels: true },
+  });
+  mermaidReady = true;
+}
+
+function MermaidBlock({ chart }) {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    const render = async () => {
+      initMermaid();
+      const id = `mermaid-${Math.random().toString(36).slice(2)}`;
+      try {
+        const { svg } = await mermaid.render(id, chart);
+        if (!cancelled && ref.current) {
+          ref.current.innerHTML = svg;
+        }
+      } catch (err) {
+        if (!cancelled && ref.current) {
+          ref.current.innerHTML = `<pre>Diagram render error: ${String(err.message || err)}</pre>`;
+        }
+      }
+    };
+    render();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [chart]);
+
+  return <div className="mermaid-block" ref={ref} />;
+}
 
 // ── Blog card ──────────────────────────────────────────────────────────────────
 function BlogCard({ post, onOpen }) {
@@ -87,7 +129,22 @@ function BlogReader({ post, onClose }) {
           </header>
 
           <div className="reader-body">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              components={{
+                code({ inline, className, children, ...props }) {
+                  const lang = (className || '').replace('language-', '').trim();
+                  if (!inline && lang === 'mermaid') {
+                    return <MermaidBlock chart={String(children).replace(/\n$/, '')} />;
+                  }
+                  return (
+                    <code className={className} {...props}>
+                      {children}
+                    </code>
+                  );
+                },
+              }}
+            >
               {post.content}
             </ReactMarkdown>
           </div>

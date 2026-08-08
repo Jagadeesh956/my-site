@@ -427,6 +427,21 @@
   margin: 1em 0;
 }
 
+.mermaid-block {
+  background: #fff;
+  border: 1px solid #e6e8f0;
+  border-radius: 12px;
+  padding: 14px;
+  margin: 1.3em 0;
+  overflow-x: auto;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+}
+
+.mermaid-block svg {
+  width: 100%;
+  height: auto;
+}
+
 /* ── Responsive ──────────────────────────────────────────────────────────────── */
 @media (max-width: 600px) {
   .blog-grid { grid-template-columns: 1fr; }
